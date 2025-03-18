@@ -77,3 +77,38 @@ const step2 = step1.toString();
 const minutes = step2.padStart(2, "0");
 alert(`Time ${hours}:${minutes}`);
 
+// Напишіть код, який запитуватиме у користувача
+// логін за допомогою prompt і виводить результат в консоль браузера
+
+// Після цього додайте перевірку введеного користувачем значення:
+// Якщо відвідувач вводить "Адмін",
+// то prompt запитує пароль (не забудьте зберігти його у змінну для подальшої перевірки).
+// Якщо нічого не ввели або натиснули Cancel,
+// Вивести в alert строку "Скасовано"
+// В іншому випадку вивести в alert рядок "Я вас не знаю"
+
+// Пароль перевіряти так:
+// Якщо введено пароль "Я головний",
+// то вивести в alert рядок "Добрий день!",
+// в іншому випадку вивести в alert рядок "Невірний пароль!"
+
+const login = prompt("Введіть логін");
+const adminLogin = "Адмін";
+const adminPwd = "Я головний";
+const wrongPwd = "Невірний пароль!";
+const messageAdpwd = "Добрий день!";
+const messageCancel = "Скасовано";
+const messageUnknown = "Я вас не знаю";
+let pwd;
+if (login === null || login === "") {
+    alert(messageCancel);
+} else if (login === adminLogin) {
+    pwd = prompt("Введіть пароль");
+} else {
+    alert(messageUnknown);
+} if (pwd === adminPwd) {
+    alert(messageAdpwd);
+} else {
+    alert(wrongPwd);
+}
+
