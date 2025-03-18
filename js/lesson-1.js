@@ -34,3 +34,18 @@ if (min >= 0 && min <= 15) {
 } else {
     alert(`${min} входить в четверту чверть`);
 }
+
+
+const num = Number(prompt("Введіть значення від 1 до 4"));
+let result = num;
+if (num === 1) {
+    result = "Зима";
+} else if (num === 2) {
+    result = "Весна";
+} else if (num === 3) {
+    result = "Літо";
+} else if (num === 4) {
+    result = "Осінь";
+} else {
+    result = "Вибачте, але ви маєте ввести значення від 1 до 4 включно";
+} alert(result);
