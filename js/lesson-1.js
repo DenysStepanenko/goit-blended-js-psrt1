@@ -7,11 +7,10 @@
 // Підказка: prompt завжди повертає рядок (String), тому перед перевіркою
 // перетворіть значення на число за допомогою Number().
 
-function checkNumber(number) {
-    const userNumber = Number(prompt('Enter a number'));
-    if (userNumber === number(10)) {
-        alert('Correct');
-    } else {
-        alert('Incorrect');
-    }
+
+const number = Number(prompt("Введіть число:"));
+if (number === 10) {
+    alert("Вірно");
+} else {
+    alert("Невірно");
 }
