@@ -150,3 +150,23 @@ function getNumCheck(a, b) {
         return message;
     }
 }
+
+
+// Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
+// якщо параметр age більше чи дорівнює 18.
+// В іншому випадку вона запитує підтвердження через confirm
+// і повертає його результат (true/false).
+function isAdult(age) {
+    if (typeof age !== "number" || isNaN(age)) {
+        return "Please enter a valid number!";
+    }
+    if (age <= 18) {
+        const confirm = prompt("Підтвердіть свій вік");
+        const confirmedAge = Number(confirm);
+        if (isNaN(confirmedAge)) {
+            return "Invalid confirmation age!";
+        }
+        return confirmedAge >= 18;
+    }
+    return true;
+}
