@@ -137,3 +137,16 @@ function getNumbers(min, max) {
     }
     return sum;
 }
+
+// Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
+// Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
+// повертати з функції рядок - 'Not a number!'.
+
+function getNumCheck(a, b) {
+    const message = "Not a number!";
+    if (typeof a === "number" && typeof b === "number") {
+        return Math.min(a, b);
+    } else {
+        return message;
+    }
+}
